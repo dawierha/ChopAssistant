@@ -3,6 +3,7 @@ package com.justai.jaicf.template.scenario
 import com.justai.jaicf.channel.googleactions.actions
 import com.justai.jaicf.channel.googleactions.dialogflow.DialogflowIntent
 import com.justai.jaicf.channel.googleactions.dialogflow.actionsDialogflow
+import com.justai.jaicf.helpers.ssml.break1s
 import com.justai.jaicf.model.scenario.Scenario
 import com.justai.jaicf.template.jokes.JokeReader
 import com.justai.jaicf.template.intent.ChopIntent
@@ -67,8 +68,8 @@ object MainScenario: Scenario() {
                 val slots = activator.actionsDialogflow?.slots ?: mapOf()
                 val product: String = slots["product"] as String
                 reactions.run {
-                    say("The $product is in the ${ProductSearch.findProductSection(product)} section")
-                    say("\nDo you need any more help?")
+                    say("""The $product is in the ${ProductSearch.findProductSection(product)} section, $break1s
+                        Do you need any more help?""".trimIndent())
                     buttons("Yes", "No")
                 }
             }
@@ -116,28 +117,5 @@ object MainScenario: Scenario() {
                 }
             }
         }
-
-
-
-        /**
-         * Add more states with activators here. For example:
-         *
-         * state("my_state") {
-         *   activators {
-         *     intent("MY_INTENT")
-         *   }
-         *   action {
-         *     reactions.say("My intent has been received.")
-         *   }
-         *   state("my_inner_state") {
-         *     activators {
-         *       intent("ANOTHER_INTENT")
-         *     }
-         *     action {
-         *       reactions.say("The inner state was activated via another intent.")
-         *     }
-         *   }
-         * }
-         */
     }
 }

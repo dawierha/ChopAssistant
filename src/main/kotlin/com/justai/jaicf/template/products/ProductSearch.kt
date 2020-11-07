@@ -9,11 +9,11 @@ object ProductSearch {
     private val products: MutableMap<String, String> = mutableMapOf()
 
     init {
-        rows.forEach { r -> products.putIfAbsent(r[0], r[1]) }
+        rows.forEach { r -> products.putIfAbsent(r[0].toLowerCase(), r[1]) }
     }
 
     fun findProductSection(name: String): String
     {
-        return products.getOrDefault(name, "Unknown")
+        return products.getOrDefault(name.toLowerCase(), "Unknown")
     }
 }
