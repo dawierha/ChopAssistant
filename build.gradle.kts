@@ -30,6 +30,7 @@ dependencies {
     implementation("com.justai.jaicf:core:$jaicf")
     implementation("com.justai.jaicf:google-actions:$jaicf")
     implementation("io.ktor:ktor-server-netty:$ktor")
+    implementation("com.github.doyaaaaaken:kotlin-csv-jvm:0.7.3")
 }
 
 tasks {
