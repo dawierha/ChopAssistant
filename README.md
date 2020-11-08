@@ -6,6 +6,8 @@ A voice assistant that allows for customers to find where you have your goods st
 
 All you have to do as a business owner is to add your store location and layout to the action we have created and you are good to go. We believe that businesses are overlooked in the pandemic and don't get the support they deserve. So we hope to help them as much as humanly possible, primarily by cutting their personnel costs in favor of AI which we will provide for a lot less than what it costs them today.
 
+[Video DEMO](https://youtu.be/2kxGB6mlAW0)
+
 ## How to use
 
 ### Run locally
