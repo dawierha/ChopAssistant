@@ -1,10 +1,12 @@
-# JAICF Bot template
+# Chop Assistant
+Personalized shop assistant which helps guiding you efficiently through a store, to find the item you're looking for.
 
-Here is a ready to use [JAICF](https://github.com/just-ai/jaicf-kotlin) bot template that can be run locally or deployed to Heroku server and connected to Google Assistant.
+# Description
+A voice assistant that allows for customers to find where you have your goods stocked without having to ask any staff. By using Just-AIs powerful conversational framework JAICF we have developed a Google Assistant action that your customers can use hassle-free. The agent is written in kotlin and powered by google's own powerful NLU framework Dialog Flow. The implementation will not only help small business owners with personnel costs, but also customers won't have to unnecessarily interact with people outside of their home when they are asking for help. They will always have the solution with them.
+
+All you have to do as a business owner is to add your store location and layout to the action we have created and you are good to go. We believe that businesses are overlooked in the pandemic and don't get the support they deserve. So we hope to help them as much as humanly possible, primarily by cutting their personnel costs in favor of AI which we will provide for a lot less than what it costs them today.
 
 ## How to use
-
-You can use this template locally on your PC or deploy it on Heroku server.
 
 ### Run locally
 
@@ -18,45 +20,3 @@ And then run `ngrok http 8080` in the terminal to obtain public URL.
 
 Copy this URL then and use it as a fulfillment URL in your [Dialogflow](https://dialogflow.com) agent (see below).
 
-### Deploy to Heroku
-
-Just click on the button below to deploy this template on Heroku server.
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-1. After deployment open the app and copy the URL of the app to clipboard.
-2. Then go to [Dialogflow](https://dialogflow.com), create a new agent and setup a fulfillment URL.
-3. Enable fulfillment for every intent in you agent.
-4. Click on _Google Assistant_ link on the left side bar to create a new Google Assistant Action connected to your Dialogflow agent.
-5. That's it! You now can start the app and see how you server responds with some responses.
-
-### How to upload code changes to Heroku
-
-Please make the next steps to upload your changes on Heroku.
-
-Install [git](https://git-scm.com/downloads) and [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install).
-Run a terminal (or console) on your machine and type
-
-```
-heroku login
-heroku git:clone -a <your Heroku application name>
-cd <your Heroku application name>
-git remote add origin https://github.com/just-ai/jaicf-template
-git pull origin master
-```
-
-_You have to do these steps only once._
-
-Once you are ready to upload your changes to Heroku, just type
-
-```
-git add .
-git commit -am "some comments"
-git push
-```
-
-Heroku will build and deploy your changes automatically.
-
-## Community
-
-You're welcome to [join a Slack community](https://join.slack.com/t/jaicf/shared_invite/zt-duq07hx2-w_c71O8BnKDCIqhSXflRjA) to share your ideas or ask questions regarding the JAICF usage.
